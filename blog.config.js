@@ -1,5 +1,5 @@
 const BLOG = {
-  title: 'Surya',
+  title: 'Surya Murugan',
   author: 'Surya Murugan',
   email: 'surya@suryamurugan.in',
   link: 'https://suryamurugna.in',
