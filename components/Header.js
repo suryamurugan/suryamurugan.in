@@ -8,14 +8,14 @@ import useTheme from '@/lib/theme'
 const NavBar = () => {
   const BLOG = useConfig()
   const locale = useLocale()
-  const links = [
-    { id: 0, name: locale.NAV.INDEX, to: BLOG.path || '/', show: true },
-    { id: 1, name: locale.NAV.ABOUT, to: '/about', show: BLOG.showAbout },
-    { id: 3, name: locale.NAV.PROJECTS, to: '/projects', show: true },
-    // { id: 2, name: locale.NAV.RSS, to: '/feed', show: true, external: true },
-    { id: 3, name: locale.NAV.SEARCH, to: '/search', show: true }
+  // const links = [
+  //   { id: 0, name: locale.NAV.INDEX, to: BLOG.path || '/', show: true },
+  //   { id: 1, name: locale.NAV.ABOUT, to: '/about', show: BLOG.showAbout },
+  //   { id: 3, name: locale.NAV.PROJECTS, to: '/projects', show: true },
+  //   // { id: 2, name: locale.NAV.RSS, to: '/feed', show: true, external: true },
+  //   { id: 3, name: locale.NAV.SEARCH, to: '/search', show: true }
     
-  ]
+  // ]
  
   return (
     <div className="flex-shrink-0">
@@ -106,21 +106,22 @@ export default function Header ({ navBarTitle, fullWidth }) {
         </svg>
         <div className="flex items-center">
           <Link href="/" aria-label={BLOG.title}>
-            <Image
+            {/* <Image
               src={favicon}
               width={24}
               height={24}
               alt={BLOG.title}
               onError={() => setFavicon(true)}
-            />
-          </Link>
-          <HeaderName
+            /> */}
+             <HeaderName
             ref={titleRef}
             siteTitle={BLOG.title}
             siteDescription={BLOG.description}
             postTitle={navBarTitle}
             onClick={handleClickHeader}
           />
+          </Link>
+         
         </div>
         <NavBar />
       </div>
